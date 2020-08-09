@@ -37,27 +37,31 @@ In this directory, I document my template of starting a React app with Next.js.
 		
 ### Step 03: Create server.js
 
-	app.prepare().then(() => {
+	const express = require("express");
+	const bodyParser = require("body-parser");
 
+	const next = require('next');
+	const dev = process.env.NODE_ENV !== 'production';
+	const app = next({ dev });
+	const handle = app.getRequestHandler();
+	
+	app.prepare().then(() => {
 		//step 1: initiate express and assign a port
 		const server = express();
 
-		//step 3: create customized route, the order is important
+		//step 2: create customized route, the order is important
 		// server.get("/pagesubmit", (req,res)=>{
 		//   app.render(req,res,"/",{query})
 		// });
 
-		//step 2: re-create the functionality provided by next.js
+		//step 3: re-create the functionality provided by next.js
 		server.get("*",(req,res)=>{
 			return handle(req,res);
 		});
-
-
 		server.listen(3000, err => {
 			if (err) throw err;
 			console.log("> Now serving on localhost: 3000")
 		})
-
 	});
 	
 	
@@ -78,3 +82,10 @@ In this directory, I document my template of starting a React app with Next.js.
 		-validators.js
 	- server.js
 	
+	
+### Step 05: Build a REST API Backend with Node.js & Express
+1. Set up Node.js + Express App
+2. Add Routes
+3. Add Controller & (Dummy) Logic
+4. Add User Input Validation
+
