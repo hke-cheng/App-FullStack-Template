@@ -7,7 +7,7 @@ In this directory, I document my template of starting a React app with Next.js.
 	$ mkdir first-next
 	$ cd first-next/
 	$ npm init -y
-	$ npm install --save react react-dom next express axios
+	$ npm install --save react react-dom next express body-parser axios
 	$ npm install @material-ui/core 
 	$ npm install @material-ui/icons
 	
