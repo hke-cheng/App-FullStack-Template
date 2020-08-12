@@ -86,9 +86,10 @@ In this directory, I document my template of starting a React app with Next.js.
 ### Step 05: Build a REST API Backend with Node.js & Express
 1. Set up Node.js + Express App
 2. Add Routes
-	1.Split routes and create differen middleware
-	2.Handling Errors,and send back to json data at end points
-	3.Adding customized Error Model instead of Error scripts.
+		1.Split routes and create differen middleware
+		2.Handling Errors,and send back to json data at end points
+		3.Adding customized Error Model instead of Error scripts.
+		4.Split out Controller founctions/models
 3. Add Controller & (Dummy) Logic
 4. Add User Input Validation
 
